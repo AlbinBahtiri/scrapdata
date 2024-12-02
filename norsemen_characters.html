@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Norsemen Characters</h1>
+<form method="get" action="/norsemen_characters" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="search" class="form-control" placeholder="Search characters..." value="{{ search_query }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Character Name</th>
+            <th>Description</th>
+            <th>Image URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for character in norsemen %}
+        <tr>
+            <td>{{ character.id }}</td>
+            <td>{{ character.character_name }}</td>
+            <td>{{ character.description }}</td>
+            <td>
+    <a href="/norsemen_characters/{{ character.id }}" onclick="return true;">
+        <img src="{{ character.image_url }}" alt="{{ character.character_name }}" style="width: 100px; height: auto; cursor: pointer;">
+    </a>
+</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
