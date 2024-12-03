@@ -25,7 +25,8 @@ class HandlingDataDb:
             dbname=self.database,
             host=self.ip_address,
             user=self.user,
-            password=self.password
+            password=self.password,
+            sslmode="require"
         )
         self.C.set_client_encoding('UTF8')
         self.cursor = self.C.cursor()
