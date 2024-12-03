@@ -1,8 +1,8 @@
 {
   "postgres_sql": {
-    "IPAddress": "127.0.0.1",
+    "IPAddress": "dpg-ct7mklg8fa8c738umha0-a.oregon-postgres.render.com",
     "Port": 5432,
-    "User": "myuser",
-    "Password": "123"
+    "User": "root",
+    "Password": "JkdyR2gNUq5s6u8ibSqHGZzcO46rPwDl"
   }
 }

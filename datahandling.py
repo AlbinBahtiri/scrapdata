@@ -7,7 +7,7 @@ import gc
 
 class HandlingDataDb:
 
-    def __init__(self, ip_address, port, user, password,database='databaseprod'):
+    def __init__(self, ip_address, port, user, password,database='databaseprod_987y'):
 
         self.ip_address = ip_address
         self.port = str(port)

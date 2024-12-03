@@ -16,7 +16,7 @@ def create_app():
     password = config["Password"]
     host = config["IPAddress"]
     port = config["Port"]
-    database = "databaseprod"  # Replace with your actual database name
+    database = "databaseprod_987y"  # Replace with your actual database name
 
     # Configure the app
     app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{user}:{password}@{host}:{port}/{database}"
