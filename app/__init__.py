@@ -19,7 +19,9 @@ def create_app():
     database = "databaseprod_987y"
     sslmode = "require"
     # Configure the app
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{user}:{password}@{host}:{port}/{database}"
+    app.config['SQLALCHEMY_DATABASE_URI'] = (
+        f"postgresql://{user}:{password}@{host}:{port}/{database}?sslmode=require"
+    )
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Initialize extensions
