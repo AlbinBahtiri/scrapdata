@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Characters</h1>
+
+<!-- Search Form -->
+<form method="get" action="/characters" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="search" class="form-control" placeholder="Search characters..." value="{{ search_query }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Character</th>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for character in characters %}
+        <tr>
+            <td>{{ character.id }}</td>
+            <td>{{ character.character }}</td>
+            <td>{{ character.name }}</td>
+            <td>
+    <a href="/characters/{{ character.id }}" onclick="return true;">
+        <img src="{{ character.img }}" alt="{{ character.name }}" style="width: 100px; height: auto; cursor: pointer;">
+    </a>
+</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
