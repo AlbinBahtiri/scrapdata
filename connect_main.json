@@ -1,9 +1,9 @@
 {
   "postgres_sql": {
-    "IPAddress": "dpg-ct7mklg8fa8c738umha0-a.oregon-postgres.render.com",
-    "Port": 5432,
-    "User": "root",
-    "Password": "JkdyR2gNUq5s6u8ibSqHGZzcO46rPwDl",
-    "Options": "sslmode=require"
+    "IPAddress": "${IPADDRESS}",
+    "Port": ",${PORT}",
+    "User": "${USER}",
+    "Password": "${PASSWORD}",
+    "Options": "${OPTIONS}"
   }
 }

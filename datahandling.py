@@ -7,7 +7,7 @@ import gc
 
 class HandlingDataDb:
 
-    def __init__(self, ip_address, port, user, password,database='databaseprod_987y',sslmode='require'):
+    def __init__(self, ip_address, port, user, password,database='databaseprod_987y'):
 
         self.ip_address = ip_address
         self.port = str(port)
@@ -16,7 +16,6 @@ class HandlingDataDb:
         self.password = password
         self.connection = None
         self.cursor = None
-        self.sslmode = sslmode
 
     def connect_db(self):
         """
