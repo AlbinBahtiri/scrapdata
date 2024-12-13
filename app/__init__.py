@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
+import os
 
 # Initialize the database
 db = SQLAlchemy()
@@ -12,10 +13,10 @@ def create_app():
     with open('connect_main.json', 'r') as file:
         config = json.load(file)["postgres_sql"]
 
-    user = config["User"]
-    password = config["Password"]
-    host = config["IPAddress"]
-    port = config["Port"]
+    user = os.getenv("USER", "default_user")
+    password = os.getenv("PASSWORD", "default_password")
+    host = os.getenv("IPADDRESS", "localhost")
+    port = os.getenv("PORT", "5432")
     database = "databaseprod_987y"
     sslmode = "require"
     # Configure the app
